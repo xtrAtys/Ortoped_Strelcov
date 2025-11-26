@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стоматология Ортодонт Малков - Лечение зубов и исправление прикуса</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #1a76d2;
+            --secondary-color: #64b5f6;
+            --accent-color: #e3f2fd;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(26, 118, 210, 0.85), rgba(26, 118, 210, 0.9)), url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #1565c0;
+            border-color: #1565c0;
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .appointment-form {
+            background-color: var(--accent-color);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .google-form-container {
+            height: 1100px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .google-form-container {
+                height: 1300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Навигация -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-tooth me-2"></i>Ортопед Стрельцов
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Контакты</a>
+                </li>
+            </ul>
+            <a href="#appointment" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">Записаться на прием</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Герой секция -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Здоровая улыбка на всю жизнь</h1>
+                <p class="lead mb-4">Какой-то текст</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="#appointment" class="btn btn-light btn-lg px-4">Записаться на прием</a>
+                    <a href="#services" class="btn btn-outline-light btn-lg px-4">Мои услуги</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Услуги -->
+<section id="services" class="py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title d-inline-block">Мои услуги</h2>
+                <p class="text-muted">Мы предлагаем полный спектр стоматологических услуг для всей семьи</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-braces"></i>
+                        </div>
+                        <h5 class="card-title">Ортодонтия</h5>
+                        <p class="card-text text-muted">Исправление прикуса у детей и взрослых с помощью брекет-систем и элайнеров</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-droplet"></i>
+                        </div>
+                        <h5 class="card-title">Лечение зубов</h5>
+                        <p class="card-text text-muted">Качественное лечение кариеса, пульпита и других заболеваний с использованием современных методов</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-tooth"></i>
+                        </div>
+                        <h5 class="card-title">Протезирование</h5>
+                        <p class="card-text text-muted">Восстановление утраченных зубов с помощью коронок, мостов и съемных протезов</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-brightness-high"></i>
+                        </div>
+                        <h5 class="card-title">Отбеливание</h5>
+                        <p class="card-text text-muted">Профессиональное отбеливание зубов с гарантированным результатом и без вреда для эмали</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-file-medical"></i>
+                        </div>
+                        <h5 class="card-title">Диагностика</h5>
+                        <p class="card-text text-muted">Точная диагностика с использованием современного оборудования и 3D-технологий</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card service-card shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <h5 class="card-title">Гигиена</h5>
+                        <p class="card-text text-muted">Профессиональная гигиена полости рта, удаление зубного камня и налета</p>
+                        <a href="#" class="btn btn-outline-primary">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- О клинике -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+                <img src="icons/Photo.jpg" alt="Photo" class="img-fluid rounded shadow" style="max-width: 400px;">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">Обо мне</h2>
+                <p class="mb-4">Текст</p>
+                <p class="mb-4">Текст</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Современное оборудование и материалы</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Опытные врачи с высшим образованием</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Индивидуальный подход к каждому пациенту</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Доступные цены и рассрочка платежа</li>
+                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Удобное расположение в центре города</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary mt-3">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Запись на прием -->
+<section id="appointment" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="appointment-form shadow">
+                    <div class="text-center mb-4">
+                        <h2 class="section-title d-inline-block">Запись на прием</h2>
+                        <p class="text-muted">Заполните форму ниже, чтобы записаться на прием</p>
+                    </div>
+                    <!-- Встроенная Google Form -->
+                    <iframe class="google-form-container" src="https://docs.google.com/forms/d/e/1FAIpQLSeiHpQJHFCgvKphs9QKHZlqQlNVIDnvLtHrCKcYpzXLAxElhA/viewform?usp=header" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title d-inline-block">Контакты</h2>
+                <p class="text-muted">Свяжитесь с нами удобным для вас способом</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex mb-4">
+                    <i class="bi bi-geo-alt fs-4"></i>
+                    <div class="ms-3">
+                        <h5>Адрес</h5>
+                        <p class="mb-0">г. Москва, ул. Стоматологическая, д. 15</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <i class="bi bi-telephone fs-4"></i>
+                    <div class="ms-3">
+                        <h5>Телефон</h5>
+                        <p class="mb-0">+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <i class="bi bi-envelope fs-4"></i>
+                    <div class="ms-3">
+                        <h5>Email</h5>
+                        <p class="mb-0">info@ortodontmalkov.ru</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <i class="bi bi-clock fs-4"></i>
+                    <div class="ms-3">
+                        <h5>Режим работы</h5>
+                        <p class="mb-0">Пн-Пт: 9:00 - 20:00</p>
+                        <p class="mb-0">Сб: 10:00 - 18:00</p>
+                        <p class="mb-0">Вс: выходной</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372789963783!2d37.61729931593058!3d55.75582698055314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1614952676340!5m2!1sru!2sru" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<footer class="footer py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <h5><i class="bi bi-tooth me-2"></i>Ортодонт Малков</h5>
+                <p class="mb-0">Стоматологическая клиника с 2005 года. Здоровые зубы и красивые улыбки - наша работа!</p>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <h5>Быстрые ссылки</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Главная</a></li>
+                    <li><a href="#services" class="text-light text-decoration-none">Услуги</a></li>
+                    <li><a href="#doctors" class="text-light text-decoration-none">Врачи</a></li>
+                    <li><a href="#contact" class="text-light text-decoration-none">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Мы в соцсетях</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-light"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-vk fs-5"></i></a>
+                    <a href="#" class="text-light"><i class="bi bi-telegram fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0">© 2023 Стоматология "Ортодонт Стрельцов". Все права защищены.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-light text-decoration-none me-3">Политика конфиденциальности</a>
+                <a href="#" class="text-light text-decoration-none">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
